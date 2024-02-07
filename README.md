@@ -1,5 +1,8 @@
 <!-- For assistance using this README for your project, reach out to your instructinoal staff. -->
 
+<!-- Important: Highlight "404pandas" and shift+command+L (for mac) or cntrl+shift+L (for windows) to select all instances of the example Github username and type your Username in its place -->
+<!-- Important: Highlight "fun_with_yen" and shift+command+L (for mac) or cntrl+shift+L (for windows) to select all instances of the example Github repository name and type your repostitory name in its place -->
+
 <div align="center">
 
   <!-- Add badges using the following format: -->
@@ -28,6 +31,7 @@
     <a href="https://github.com/404pandas/fun_with_yen"><strong>Explore the docs »</strong></a>
     <br />
     <br />
+    <!-- !!!IMPORTANT!!! add your deployment link here -->
     <a href="https://github.com/404pandas/fun_with_yen">View Demo(Broken)</a>
     ·
     <a href="https://github.com/404pandas/fun_with_yen/issues">Report Bug</a>
@@ -66,8 +70,11 @@
 
 ## About The Project
 
+<!-- !!!IMPORTANT!!! add your screenshots or demo videos here -->
 <!-- Add screenshots using the following format: -->
 <!-- ![Screenshot alt description](directPathOfScreenshots) -->
+<!-- Add video demos using the following format: -->
+<!-- ![Video alt description](directPathOfVideos) -->
 
 <!--  -->
 
@@ -135,26 +142,30 @@ Once the app is functional, screenshots will be added in this section.
 
 #### MVP
 
+<!-- This is a nested check-box that displays a nice checked or unchecked list on your Github repo to show your visitor's a quick road map! -->
+
 - [ ] Front End
 
-  - [x] User Auth
+  - [ ] User Auth
   - [ ] User Profile Page
     - [ ] Routing
     - [ ] Styling
-  - [ ] Landing/Drawing Page
+  - [ ] Landing Page
     - [ ] Routing
     - [ ] Styling
 
 - [ ] Back End
-  - [x] Models
-  - [x] Seeds
+  - [ ] Models
+  - [ ] Seeds
   - [ ] apiRouting
-  - [x] userRouting
-  - [ ] traceableItemsRouting
+  - [ ] userRouting
+  - [ ] dataOneRouting
 
 #### Future Development
 
-- [ ] Add Lines
+- [ ] Add Lines of future development ideas here
+- [ ] Add Lines of future development ideas here
+- [ ] Add Lines of future development ideas here
 
 See the [open issues](https://github.com/404pandas/fun_with_yen/issues) for a full list of proposed features (and known issues).
 
@@ -185,11 +196,15 @@ See LICENSE.txt for more information.
 
 ## Contact
 
+<!-- Add your name, portfolio link, and email if you would like here -->
+
 [Mary Elenius](https://maryelenius.com/d20) - mary.panda.jackson@gmail.com
 
 Project Links:
 
 [Github Repository](https://github.com/404pandas/fun_with_yen)
+
+<!-- !!!IMPORTANT!!! add your deployment link here -->
 
 [Deployment- link later]()
 
@@ -197,4 +212,4 @@ Project Links:
 
 ## Acknowledgments
 
-I would like to give a big shoutout to my partner in crime and daughter, Yennefer! She was the inspiration for this app. Every day she proves she is small yet mighty!
+Example MVC folder structure provided by 2u's Teacher's Assistant [Mary Elenius](https://maryelenius.com/d20)

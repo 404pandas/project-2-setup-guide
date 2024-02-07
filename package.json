@@ -1,7 +1,7 @@
 {
-  "name": "fun-with-yen",
+  "name": "example-project-two",
   "version": "1.0.0",
-  "description": "Drawing/Tracing app for my daughter",
+  "description": "Write a description about your app here",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
