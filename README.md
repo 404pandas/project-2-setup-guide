@@ -24,10 +24,10 @@
     <img src="./public/images/" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Fun with Yen</h3>
+  <h3 align="center">Project 2 App Name</h3>
 
   <p align="center">
-    Traceable learning app for my daughter    <br />
+    Project 2 Description    <br />
     <a href="https://github.com/404pandas/fun_with_yen"><strong>Explore the docs »</strong></a>
     <br />
     <br />
