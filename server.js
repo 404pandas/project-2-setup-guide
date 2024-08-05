@@ -1,14 +1,14 @@
 // External Modules
-const path = require('path');
-const express = require('express');
-const session = require('express-session');
-const exphbs = require('express-handlebars');
-const routes = require('./controllers');
-const helpers = require('./utils/helpers');
-const sequelize = require('./config/connection');
+const path = require("path");
+const express = require("express");
+const session = require("express-session");
+const exphbs = require("express-handlebars");
+const routes = require("./controllers");
+const helpers = require("./utils/helpers");
+const sequelize = require("./config/connection");
 
 // Creates a sequelize store
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 // Initializes an instance of Express.js
 const app = express();
@@ -20,7 +20,7 @@ const hbs = exphbs.create({ helpers });
 
 // Configure and link session object and connects to Sequelize store
 const sess = {
-  secret: 'Super secret secret',
+  secret: "Super secret secret",
   // specifies options for cookies
   cookie: {
     // cookie expires after 1 day
@@ -31,7 +31,7 @@ const sess = {
     // only initialize session cookies when the protocol being used is HTTPS
     secure: false,
     // only initialize session cookies when the referrer provided by the client matches the domain the server is hosted from
-    sameSite: 'strict',
+    sameSite: "strict",
   },
   resave: false,
   saveUninitialized: true,
@@ -45,14 +45,14 @@ const sess = {
 app.use(session(sess));
 
 // Informs Express.js which template engine to use
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
 
 // Middleware for parsing application/json and urlencoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // Static middleware pointing to public folder to serve assets
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
 // sets up routes
 app.use(routes);
