@@ -1,35 +1,39 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
 // Import any models you plan to use for data's routes here
+const { ExampleData, User } = require("../models/");
 
 // If you would like to use an authGuard middleware, import it here
 
 // add a get / (landing page) route here
-router.get('/', async (req, res) => {
-  console.log('Landing page attempting to be retrieved');
+router.get("/", async (req, res) => {
   try {
+    const exampleData = await ExampleData.findAll({
+      include: [User],
+    });
+
+    const examples = exampleData.map((example) => example.get({ plain: true }));
+
+    res.render("home", { examples, loggedIn: req.session.logged_in });
   } catch (err) {
-    console.log('There was an error retrieving landing page');
     res.status(500).json(err);
   }
 });
 
 // add a get /login route here
-router.get('/login', (req, res) => {
-  console.log('Login page attempting to be retrieved');
+router.get("/login", (req, res) => {
   try {
+    res.render("login");
   } catch (err) {
-    console.log('There was an error retrieving login page');
     res.status(500).json(err);
   }
 });
 
 // add a get /signup route here
-router.get('/signup', (req, res) => {
-  console.log('Signup page attempting to be retrieved');
+router.get("/signup", (req, res) => {
   try {
+    res.render("signup");
   } catch (err) {
-    console.log('There was an error retrieving signup page');
     res.status(500).json(err);
   }
 });

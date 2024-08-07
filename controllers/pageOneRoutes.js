@@ -1,17 +1,29 @@
-const router = require('express').Router();
+const router = require("express").Router();
 
 // import any models you plan to use for this page's routes here
+const { ExampleData } = require("../models");
 
-// If you would like to you an authGuard middleware, import it here
+// protects routes from unauthorized access
+const { withGuard } = require("../utils/authGuard");
 
-// /pageOne
-router.get('/', async (req, res) => {
-  console.log('Page one attempting to be retrieved');
+router.get("/", withGuard, async (req, res) => {
   try {
-    // data retrieval logic would go here
-    // handlebar render logic with data passing would go here
+    const databyUser = await ExampleData.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
+    });
+    console.log(req.session.user_id);
+    console.log("databyUser:", databyUser); // Should not be undefined
+    const userExamples = databyUser.map((example) =>
+      example.get({ plain: true })
+    );
+
+    res.render("page-one", {
+      userExamples,
+      loggedIn: req.session.logged_in,
+    });
   } catch (err) {
-    console.log('There was an error retrieving page one');
     res.status(500).json(err);
   }
 });
