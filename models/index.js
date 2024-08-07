@@ -2,7 +2,7 @@
 const User = require("./User");
 const ExampleData = require("./ExampleData");
 
-// create any associations here
+// Reminder- create any additional associations here
 ExampleData.belongsTo(User, {
   foreignKey: "userId",
   onDelete: "CASCADE",

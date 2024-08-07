@@ -6,7 +6,7 @@ const withGuard = (req, res, next) => {
     next();
   }
 };
-
+// if the user is not logged in, send a 403 status code and a message
 const apiGuard = (req, res, next) => {
   if (!req.session.logged_in) {
     res.status(403).json({ msg: "you must login to perform this action" });

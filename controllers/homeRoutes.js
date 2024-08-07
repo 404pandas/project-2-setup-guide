@@ -14,6 +14,8 @@ router.get("/", async (req, res) => {
 
     const examples = exampleData.map((example) => example.get({ plain: true }));
 
+    // Reminder- We're passing the examples data to the home handlebars template here!
+    // Reminder- We're also passing the loggedIn status to the home template here so that we can conditionally render items if the user is logged in or not (like we do with the navbar using `{{if loggedIn}}`).
     res.render("home", {
       examples,
       loggedIn: req.session.logged_in,

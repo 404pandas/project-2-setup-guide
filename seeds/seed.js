@@ -1,9 +1,9 @@
 const sequelize = require("../config/connection");
 
-// import any models you want to seed here
+// Reminder- import any models you want to seed here
 const { User, ExampleData } = require("../models");
 
-// import any data you want to seed here
+// Reminder- import any data you want to seed here
 const exampleData = require("./exampleData.json");
 const userData = require("./userData.json");
 
@@ -25,6 +25,8 @@ const seedDatabase = async () => {
     returning: true,
   });
   console.log("Example data created");
+
+  // Reminder- add any other models you want to seed here
 
   process.exit(0);
 };

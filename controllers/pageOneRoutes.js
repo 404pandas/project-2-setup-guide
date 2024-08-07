@@ -9,16 +9,17 @@ const { withGuard } = require("../utils/authGuard");
 router.get("/", withGuard, async (req, res) => {
   try {
     const databyUser = await ExampleData.findAll({
+      // Reminder- this is how you filter data by user_id
       where: {
         user_id: req.session.user_id,
       },
     });
-    console.log(req.session.user_id);
-    console.log("databyUser:", databyUser); // Should not be undefined
+
     const userExamples = databyUser.map((example) =>
       example.get({ plain: true })
     );
-
+    // Reminder- We're passing the userExamples data to the page-one handlebars template here!
+    // Reminder- We're also passing the loggedIn status to the page-one handlebars template here so that we can conditionally render items if the user is logged in or not.
     res.render("page-one", {
       userExamples,
       loggedIn: req.session.logged_in,

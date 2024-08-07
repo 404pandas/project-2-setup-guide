@@ -22,7 +22,7 @@ ExampleData.init(
         key: "id",
       },
     },
-    // Add any new columns to the ExampleData model here
+    // Reminder- Add any new columns to the ExampleData model here
   },
   {
     sequelize,
