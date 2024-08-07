@@ -14,7 +14,11 @@ router.get("/", async (req, res) => {
 
     const examples = exampleData.map((example) => example.get({ plain: true }));
 
-    res.render("home", { examples, loggedIn: req.session.logged_in });
+    res.render("home", {
+      examples,
+      loggedIn: req.session.logged_in,
+      username: req.session.username,
+    });
   } catch (err) {
     res.status(500).json(err);
   }

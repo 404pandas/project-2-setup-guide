@@ -6,9 +6,6 @@ const { ExampleData } = require("../../models");
 // protects routes from non-logged in users
 const { apiGuard } = require("../../utils/authGuard");
 
-console.log("ExampleData:", ExampleData); // Should not be undefined
-console.log("apiGuard:", apiGuard); // Should not be undefined
-
 router.post("/", apiGuard, async (req, res) => {
   try {
     const newExampleData = await ExampleData.create({
