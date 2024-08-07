@@ -1,36 +1,39 @@
-// External Modules
+// Core Modules
 const path = require("path");
+
+// Third-party Modules
 const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
+
+// Local Modules
 const routes = require("./controllers");
-const helpers = require("./utils/helpers");
 const sequelize = require("./config/connection");
 
-// Creates a sequelize store
+// Initializes Sequelize with session store
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 // Initializes an instance of Express.js
 const app = express();
-// Specify on which port the Express.js server will run
+// Specifies which port the Express.js server will run
 const PORT = process.env.PORT || 3001;
 
-// Set up Handlebars.js engine with custom helpers
-const hbs = exphbs.create({ helpers });
+// Sets up Handlebars.js engine
+const hbs = exphbs.create();
 
-// Configure and link session object and connects to Sequelize store
+// Sets up session and connect to our Sequelize db
 const sess = {
-  secret: "Super secret secret",
-  // specifies options for cookies
+  secret: "Pandas are awesome",
+  // Express session will use cookies by default, but you can specify options for those cookies by adding a 'cookies' property to your session options
   cookie: {
-    // cookie expires after 1 day
+    // Sets the maximum age for the cookie to be valid. Here, the cookie (and session) will expire after one day. The time should be given in milliseconds.
     // 24 hours * 60 minutes * 60 seconds * 1000 milliseconds
     maxAge: 24 * 60 * 60 * 1000,
-    // only store session cookies when the protocol being used to connect to the server is HTTP
+    // Only store session cookies when the protocol being used to connect to the server is HTTP
     httpOnly: true,
-    // only initialize session cookies when the protocol being used is HTTPS
+    // secure tells express-session to only initialize session cookies when the protocol being used is HTTPS. Having this set to true and running a server without encryption will result in the cookies not showing up in your developer console.
     secure: false,
-    // only initialize session cookies when the referrer provided by the client matches the domain the server is hosted from
+    // Only initialize session cookies when the referrer provided by the client matches the domain the server is hosted from
     sameSite: "strict",
   },
   resave: false,
@@ -44,7 +47,7 @@ const sess = {
 // Adds express-session and store as Express.js middleware
 app.use(session(sess));
 
-// Informs Express.js which template engine to use
+// Informs Express.js to use Handlebars as the default template engine
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
@@ -61,8 +64,7 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
     console.log(
-      `Visit local site at http://localhost:${PORT}. Visit API data at http://localhost:${PORT}/api/dataOne or (||)
-      /api/dataTwo/, /api/dataThree/ or /api/dataFour/`
+      `Visit local site at http://localhost:${PORT}. Visit API with Insomnia at http://localhost:${PORT}/api/`
     )
   );
 });

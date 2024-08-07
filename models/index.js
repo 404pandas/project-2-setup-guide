@@ -1,6 +1,16 @@
 // import all models here
+const User = require("./User");
+const ExampleData = require("./ExampleData");
 
 // create any associations here
+ExampleData.belongsTo(User, {
+  foreignKey: "userId",
+  onDelete: "CASCADE",
+});
+
+User.hasMany(ExampleData, {
+  foreignKey: "userId",
+});
 
 // export all models here
-module.exports = {};
+module.exports = { User, ExampleData };
