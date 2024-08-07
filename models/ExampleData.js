@@ -1,4 +1,7 @@
+// Third-party Modules
 const { Model, DataTypes } = require("sequelize");
+
+// Local Modules
 const sequelize = require("../config/connection");
 
 class ExampleData extends Model {}
