@@ -84,18 +84,6 @@ This project was built using Node, Express, Handlebars, PostgreSQL, and Sequeliz
 
 <div align="center">
 
-<!-- TODO      "bcrypt": "^5.0.0",
-    "connect-session-sequelize": "^7.0.4",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^5.2.0",
-    "express-session": "^1.17.1",
-    "pg": "^8.11.3",
-    "sequelize": "^6.3.5"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.3"-->
-
 <!-- TODO: Add any additional badges as needed. For more info, visit: https://github.com/404pandas/empty-resources/blob/main/assets/images/shields.md -->
 
 [![Javascript](https://img.shields.io/badge/Language-JavaScript-ff0000?style=plastic&logo=JavaScript&logoWidth=10)](https://javascript.info/)
@@ -103,11 +91,17 @@ This project was built using Node, Express, Handlebars, PostgreSQL, and Sequeliz
 [![Node.js](https://img.shields.io/badge/Framework-Node.js-ffff00?style=plastic&logo=Node.js&logoWidth=10)](https://nodejs.org/en/)
 [![Express](https://img.shields.io/badge/Framework-Express-80ff00?style=plastic&logo=Express&logoWidth=10)](https://expressjs.com/)
 [![npm](https://img.shields.io/badge/Tool-npm-00ff00?style=plastic&logo=npm&logoWidth=10)](https://www.npmjs.com/)
-[![ExpressSession](https://img.shields.io/badge/Package-Express_Session-00ff80?style=plastic&logo=npm&logoWidth=10)](https://www.npmjs.com/package/express-session)
 [![Bcrypt](https://img.shields.io/badge/Package-Bcrypt-00ffff?style=plastic&logo=npm&logoWidth=10)](https://www.npmjs.com/package/bcrypt)
-[![Handlebars](https://img.shields.io/badge/Package-Handlebars-0080ff?style=plastic&logo=handlebarsdotjs&logoWidth=10)](https://handlebarsjs.com/)
 [![VS Code](https://img.shields.io/badge/IDE-VSCode-0000ff?style=plastic&logo=VisualStudioCode&logoWidth=10)](https://code.visualstudio.com/docs)
 [![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-8000ff?style=plastic&logo=PostgreSQL&logoWidth=10)](https://www.postgresql.org/docs/)
+[![TypeScript](https://img.shields.io/badge/Language-TypeScript-007ACC?style=plastic&logo=typescript&logoWidth=10)](https://www.typescriptlang.org/)
+[![Dotenv](https://img.shields.io/badge/Package-Dotenv-00b894?style=plastic&logo=npm&logoWidth=10)](https://www.npmjs.com/package/dotenv)
+[![Express](https://img.shields.io/badge/Framework-Express-80ff00?style=plastic&logo=express&logoWidth=10)](https://expressjs.com/)
+[![pg](https://img.shields.io/badge/Package-pg-0984e3?style=plastic&logo=postgresql&logoWidth=10)](https://www.npmjs.com/package/pg)
+[![Sequelize](https://img.shields.io/badge/Package-Sequelize-6c5ce7?style=plastic&logo=sequelize&logoWidth=10)](https://sequelize.org/)
+[![Nodemon](https://img.shields.io/badge/DevDependency-Nodemon-d63031?style=plastic&logo=nodemon&logoWidth=10)](https://www.npmjs.com/package/nodemon)
+[![JWT](https://img.shields.io/badge/Package-JWT-000000?style=plastic&logo=jsonwebtokens&logoWidth=10)](https://jwt.io/)
+
 
 </div>
 
